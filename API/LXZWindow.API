@@ -166,31 +166,31 @@ CLXZWindow:FromHandle
 window:GetWindowHandle
 
 wnd
-wnd:Delete                               
-wnd:BookMsg                              
-wnd:ProcMessage                         
-wnd:DelRender                             
-wnd:AddRender                             
-wnd:GetRender                          
+wnd:Delete/*(),删除自己*/                               
+wnd:BookMsg/*(cmd, trans_cmd,src_wnd) src_wnd对象触发cmd事件,然后给wnd发送一个tran_cmd事件,*/                              
+wnd:ProcMessage/*(cmd,msg,sender);cmd事件名,msg事件数据,sender事件窗口*/                         
+wnd:DelRender/*(render), IRender对象*/                             
+wnd:AddRender/*(render), IRender对象*/                             
+wnd:GetRender/*(name), name渲染对象名或者ID名*/                          
 wnd:GetChildIndex	                       
 wnd:GetChildByIndex	                 
-wnd:Clone                               
+wnd:Clone/*(),返回wnd克隆对象*/                               
 wnd:SetClassName	                       
-wnd:GetClassName	                       
+wnd:GetClassName	             .      
 wnd:SetName	                                 
 wnd:GetName                                  
 wnd:HitTest                                  
 wnd:HitTest0                                 
 wnd:GetDepth                                
 wnd:GetFrame                                 
-wnd:GetRect                                  
-wnd:GetHeight                              
-wnd:SetHeight                           
-wnd:GetWidth                               
-wnd:SetWidth                             
-wnd:GetScreenPos                    
-wnd:GetPos                             
-wnd:SetPos	                           
+wnd:GetRect/*(rc or nil),返回窗口位置信息,如果无rc参数时，返回一个LXZRect对象位置信息,否则位置信息赋值rc*/
+wnd:GetHeight/*(),返回窗口高度*/                             
+wnd:SetHeight/*(height),设置高度/*                           
+wnd:GetWidth/*(),返回窗口宽度*/                                
+wnd:SetWidth/*(width),设置宽度*/                             
+wnd:GetScreenPos/*(pos),获取窗口左上角屏幕坐标*/
+wnd:SetPos/*(pos),设置窗口左上角父窗口坐标*/
+wnd:GetPos/*()获取窗口左上角父窗口坐标*/
 wnd:GetHotPos                       
 wnd:SetHotPos                       
 wnd:NormalAligned                    
