@@ -1,7 +1,7 @@
 tween
-tween.eraseIn
-tween.eraseOut
-tween.eraseInOut
+tween.eraseIn/*(type,time, begin, change, duration)*/
+tween.eraseOut/*(type,time, begin, change, duration)*/
+tween.eraseInOut/*(type,time, begin, change, duration)*/
 tween.LINEAR
 tween.SINE
 tween.QUINT
